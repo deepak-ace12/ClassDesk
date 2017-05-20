@@ -1,0 +1,45 @@
+.root {
+ -fx-background-color:  linear-gradient(lightgray, gray);
+ -fx-border-color: white;
+}
+
+.curved{
+	-fx-background-color:  linear-gradient(lightgray, gray);
+ 	-fx-border-color: white;
+	-fx-border-radius: 20;
+	-fx-padding: 10 10 10 10;
+	-fx-background-radius: 20;
+	
+	
+}
+
+.bp {
+ -fx-background-color:  linear-gradient(gray,DimGrey );
+}
+
+ 
+
+.btnLogin {
+    -fx-background-radius: 30, 30, 29, 28;
+    -fx-padding: 3px 10px 3px 10px;
+    -fx-background-color: linear-gradient(orange, orangered );
+}
+
+ 
+
+.text {
+ -fx-fill:  linear-gradient(orange , orangered);
+
+}
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(
+        from 0px .75em to .75em 0px,
+        repeat,
+        -fx-accent 0%,
+        -fx-accent 49%,
+        derive(-fx-accent, 30%) 50%,
+        derive(-fx-accent, 30%) 99%
+    );
+}
+

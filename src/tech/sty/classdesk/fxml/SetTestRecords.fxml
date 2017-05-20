@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="411.0" prefWidth="400.0" style="-fx-background-color: radial-gradient(radius 100%, derive(-fx-base,20%), derive(-fx-base,-20%));" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.sty.classdesk.view.AddTestRecords">
+   <children>
+      <AnchorPane layoutY="43.0" prefHeight="447.0" prefWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane layoutX="30.0" layoutY="37.0" prefHeight="295.0" prefWidth="326.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Class">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Batch" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Test Name" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Date" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Subjects" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Max. Marks" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="selectClass" onMouseClicked="#classSelection" prefHeight="35.0" prefWidth="170.0" promptText="Select Class" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  <ComboBox fx:id="selectBatch" onMouseClicked="#batchSelection" prefHeight="35.0" prefWidth="170.0" promptText="Select Batch" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="testNameField" prefHeight="35.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <DatePicker fx:id="testDate" prefHeight="35.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="selectSubjects" disable="true" onMouseClicked="#batchSelection" prefHeight="35.0" prefWidth="170.0" promptText="Review Subjects" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="subjectsField" prefHeight="35.0" prefWidth="109.0" promptText="Add 4 Subjects" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets right="25.0" />
+                     </GridPane.margin></TextField>
+                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#handleAdd" prefHeight="35.0" prefWidth="24.0" text="+" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets left="2.0" right="2.0" />
+                     </padding>
+                  </Button>
+                  <TextField fx:id="maxField" prefHeight="35.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <Button fx:id="btnOk" layoutX="105.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="35.0" prefWidth="91.0" stylesheets="@../css/EditDialogs.css" text="Ok">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancel" layoutX="222.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="35.0" prefWidth="91.0" stylesheets="@../css/EditDialogs.css" text="Cancel">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

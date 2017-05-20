@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="392.0" prefWidth="400.0" style="-fx-background-color: radial-gradient(radius 100%, derive(-fx-base,20%), derive(-fx-base,-20%)); -fx-control-inner-background: rgb(190,190,190);" stylesheets="" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.sty.classdesk.view.StaffEditDialogController">
+   <children>
+      <GridPane layoutX="6.0" layoutY="33.0" styleClass="my-gridpane" stylesheets="@../css/Layouts.css" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="33.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="188.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="202.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Staff ID" />
+            <Label text="First Name" GridPane.rowIndex="1" />
+            <Label text="Last Name" GridPane.rowIndex="2" />
+            <Label text="E-mail" GridPane.rowIndex="3" />
+            <Label text="Subject1" GridPane.rowIndex="4" />
+            <Label text="Subject2" GridPane.rowIndex="5" />
+            <Label text="Joining Date" GridPane.rowIndex="6" />
+            <Label text="Contact Number" GridPane.rowIndex="7" />
+            <Label text="Department" GridPane.rowIndex="8" />
+            <TextField fx:id="staffIdField" GridPane.columnIndex="1" />          
+            <TextField fx:id="firstNameField" onAction="#handleOk" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="lastNameField" onAction="#handleOk" pickOnBounds="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="emailField" onAction="#handleOk" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="subjectField1" onAction="#handleOk" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="subjectField2" onAction="#handleOk" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <DatePicker fx:id="joining" prefHeight="25.0" prefWidth="213.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField disable="true" editable="false" maxWidth="-Infinity" opacity="0.39" prefHeight="25.0" prefWidth="40.0" text="+91" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <cursor>
+                  <Cursor fx:constant="DISAPPEAR" />
+               </cursor></TextField>
+            <TextField fx:id="contactField" maxWidth="161.0" onAction="#handleOk" prefHeight="25.0" prefWidth="160.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+            <TextField fx:id="deptField" onAction="#handleOk" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            </children>
+      </GridPane>
+      <ButtonBar layoutX="71.0" layoutY="319.0" prefHeight="41.0" prefWidth="229.0">
+        <buttons>
+          <Button fx:id="btnOk" mnemonicParsing="false" onAction="#handleOk" prefHeight="39.0" prefWidth="115.0" stylesheets="@../css/EditDialogs.css" text="OK" />
+            <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#handleCancel" prefHeight="38.0" prefWidth="115.0" stylesheets="@../css/EditDialogs.css" text="CANCEL" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

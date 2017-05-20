@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="637.0" prefWidth="1377.0" style="-fx-background-color: linear-gradient(lightgray, gray);" stylesheets="" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.sty.classdesk.view.PersonOverviewController">
+   <children>
+      <SplitPane dividerPositions="0.54" prefHeight="712.0" prefWidth="888.0" styleClass="column-header" stylesheets="@../css/Layouts.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane styleClass="column-header" stylesheets="@../css/Layouts.css">
+               <children>
+                  <TableView fx:id="personTable" editable="true" focusTraversable="false" layoutX="7.0" layoutY="46.0" prefHeight="634.0" prefWidth="733.0" stylesheets="@../css/Layouts.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0">
+                    <columns>
+                   	  <TableColumn fx:id="studentIdColumn" prefWidth="70.0" sortable="false" text="Student ID" />
+                      <TableColumn fx:id="firstNameColumn" prefWidth="103.0" sortable="false" text="First Name" />
+                      <TableColumn fx:id="middleNameColumn" prefWidth="103.0" sortable="false" text="Middle Name" />
+                      <TableColumn fx:id="lastNameColumn" prefWidth="103.0" sortable="false" text="Last Name" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <ComboBox fx:id="selectClass" focusTraversable="false" layoutX="26.0" layoutY="10.0" onMouseClicked="#classSelection" prefHeight="32.0" prefWidth="115.0" promptText="Select Class" visibleRowCount="5" />
+                  <ComboBox fx:id="selectBatch" focusTraversable="false" layoutX="157.0" layoutY="10.0" onMouseClicked="#batchSelection" prefHeight="32.0" prefWidth="115.0" promptText="Select Batch" visibleRowCount="5" />
+                  <Button fx:id="newBatch" layoutX="285.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleAddBatch" prefHeight="35.0" prefWidth="115.0" stylesheets="@../css/PersonOverview.css" text="+New Batch " />
+                  <TextField fx:id="searchBar" layoutX="419.0" layoutY="9.0" onKeyTyped="#handleSearch" prefHeight="25.0" prefWidth="154.0" style="-fx-border-color: black;" AnchorPane.topAnchor="9.0" />
+                  <Button layoutX="588.0" mnemonicParsing="false" onAction="#handleSearch" style="-fx-background-color: transparent;">
+                   <graphic>
+        			<ImageView fitHeight="25.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+          				<image>
+            			<Image url="file:E:/images/search.png" />
+         			 	</image>
+        			</ImageView>
+      			  </graphic>
+                  </Button>
+                  <Button layoutX="641.0" mnemonicParsing="false" onAction="#handleRefresh" style="-fx-background-color: transparent;">
+                  <graphic>
+        			<ImageView fitHeight="25.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+          				<image>
+            			<Image url="file:E:/images/refresh.png" />
+         			 	</image>
+        			</ImageView>
+      			  </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane accessibleRole="IMAGE_VIEW" style="-fx-background-color: radial-gradient(radius 100%, derive(-fx-base,20%), derive(-fx-base,-20%))(lightgray, gray);" stylesheets="@../css/Layouts.css" SplitPane.resizableWithParent="false">
+               <children>
+                  <Label graphicTextGap="1.0" prefHeight="0.0" prefWidth="252.0" styleClass="label-header" text="Person Details" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                  <GridPane layoutX="60.0" layoutY="51.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="242.0" prefWidth="261.0" styleClass="my-gridpane" stylesheets="@../css/Layouts.css" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="191.0" AnchorPane.topAnchor="51.0">
+                    <columnConstraints>
+                      <ColumnConstraints minWidth="10.0" prefWidth="128.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="139.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="First Name" GridPane.rowIndex="1" />
+                        <Label fx:id="firstNameLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" styleClass="label-bright" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Middle Name" GridPane.rowIndex="2" />
+                        <Label fx:id="middleNameLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Last Name" GridPane.rowIndex="3" />
+                        <Label fx:id="lastNameLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" styleClass="label-bright" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Branch" GridPane.rowIndex="4" />
+                        <Label fx:id="branchLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" styleClass="label-bright" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="College" GridPane.rowIndex="5" />
+                        <Label fx:id="collegeLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" styleClass="label-bright" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="Admission Date" GridPane.rowIndex="6" />
+                        <Label fx:id="admissionLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" styleClass="label-bright" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label text="Contact Number" GridPane.rowIndex="7" />
+                        <Label fx:id="contactLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" styleClass="label-bright" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Label text="D.O.B" GridPane.rowIndex="8" />
+                        <Label fx:id="birthdayLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" styleClass="label-bright" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Label text="Student ID" />
+                        <Label fx:id="studentIdLabel" text="Label" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+                  <ButtonBar layoutX="5.0" layoutY="321.0" prefHeight="43.0" prefWidth="337.0">
+                    <buttons>
+                      <Button defaultButton="true" mnemonicParsing="false" onAction="#handleNewPerson" prefHeight="25.0" stylesheets="@../css/PersonOverview.css" text="New" />
+                        <Button defaultButton="true" mnemonicParsing="false" onAction="#handleEditPerson" prefHeight="25.0" stylesheets="@../css/PersonOverview.css" text="Edit" />
+                        <Button defaultButton="true" mnemonicParsing="false" onAction="#handleMore" prefHeight="25.0" stylesheets="@../css/PersonOverview.css" text="More" />
+                        <Button fx:id="btnLoad" defaultButton="true" mnemonicParsing="false" onAction="#handleLoad" prefHeight="25.0" stylesheets="@../css/PersonOverview.css" text="Load" />
+                    </buttons>
+                  </ButtonBar>
+                  <StackPane layoutX="283.0" layoutY="51.0" prefHeight="150.0" prefWidth="154.0" style="-fx-border-color: black;">
+                     <children>
+                        <ImageView fx:id="imgView" fitHeight="150.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+                           </ImageView>
+                        <Button fx:id="btnChange" defaultButton="true" mnemonicParsing="false" onAction="#handleUploadFile" opacity="0.50" prefHeight="140.0" prefWidth="140.0" style="-fx-background-color: transparent;" />
+                     </children>
+                  </StackPane>
+                  <Button fx:id="btnUpload" defaultButton="true" layoutX="316.0" layoutY="215.0" mnemonicParsing="false" onAction="#handleUploadFile" prefHeight="35.0" prefWidth="88.0" stylesheets="@../css/PersonOverview.css" text="Update" />
+                  <PieChart fx:id="piechart" layoutX="5.0" layoutY="367.0" prefHeight="313.0" prefWidth="445.0" />
+                  <Text fx:id="caption" fill="#f56117" layoutX="355.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: Bold; -fx-font-size: 14px;" wrappingWidth="59.9999979743734" />
+                  <Button layoutX="489.0" layoutY="14.0" mnemonicParsing="false" onAction="#feedAttendance" stylesheets="@../css/PersonOverview.css" text="Feed Attendance" />
+            </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

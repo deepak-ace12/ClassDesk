@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="673.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.sty.classdesk.view.StudentsFullDetailsController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutX="184.0" layoutY="63.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.40264900662251657" layoutX="142.0" layoutY="18.0" prefHeight="196.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Label layoutY="8.0" prefHeight="27.0" prefWidth="152.0" text="Fee Details" textFill="#2188c2">
+                                 <font>
+                                    <Font name="System Bold Italic" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="feePaidLabel" layoutX="14.0" layoutY="83.0" textFill="#19b923">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="63.0" layoutY="83.0" prefHeight="18.0" prefWidth="13.0" text="+" textFill="#0c7ef5">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="feePendingLabel" layoutX="88.0" layoutY="83.0" textFill="#f52b2b">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="161.0" layoutY="83.0" prefHeight="18.0" prefWidth="13.0" text="=" textFill="#0c7ef5">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="feeTotalLabel" layoutX="187.0" layoutY="83.0" textFill="#431fc6">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="21.0" layoutY="112.0" text="Paid" textFill="#f89a28">
+                                 <font>
+                                    <Font name="System Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="91.0" layoutY="112.0" text="Pending" textFill="#f89a28">
+                                 <font>
+                                    <Font name="System Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="199.0" layoutY="112.0" text="Total" textFill="#f89a28">
+                                 <font>
+                                    <Font name="System Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="13.0" layoutY="163.0" text="Last Installment :" textFill="#097230">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lastInstallmentLabel" layoutX="178.0" layoutY="163.0" textFill="#162cbc">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="13.0" layoutY="185.0" text="Paid On :" textFill="#097230">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="paidOnLabel" layoutX="178.0" layoutY="186.0" textFill="#0f3294">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="12.0" layoutY="205.0" text="Next Installment Due On :" textFill="#eb8315">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="nextDueDateLabel" layoutX="178.0" layoutY="205.0" textFill="#e41616">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <StackPane layoutX="406.0" layoutY="31.0" prefHeight="150.0" prefWidth="128.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <ImageView fx:id="imgView" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </StackPane>
+                              <GridPane layoutX="14.0" layoutY="14.0" prefHeight="227.0" prefWidth="284.0" stylesheets="@../css/Layouts.css">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Full Name" GridPane.rowIndex="1" />
+                                    <Label fx:id="fullNameLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label text="Contact No." GridPane.rowIndex="2" />
+                                    <Label fx:id="studentContactLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label text="Email-id" GridPane.rowIndex="3" />
+                                    <Label fx:id="emailIdLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label text="Guardian" GridPane.rowIndex="4" />
+                                    <Label fx:id="guardianNameLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label text="Guardian Contact" GridPane.rowIndex="5" />
+                                    <Label fx:id="guardianContactLabel" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Label text="Address" GridPane.rowIndex="6" />
+                                    <Label fx:id="addressLabel" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label text="City" GridPane.rowIndex="7" />
+                                    <Label text="Mumbai" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <Label text="Student Id" />
+                                    <Label fx:id="idLabel" GridPane.columnIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <Label layoutX="356.0" layoutY="164.0" />
+                           </children></AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.6569536423841059" prefHeight="242.0" prefWidth="757.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane>
+                           <children>
+                              <BarChart fx:id="barChart" prefHeight="240.0" prefWidth="493.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis fx:id="yAxis" side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@../css/PersonOverview.css">
+                           <children>
+                              <PieChart fx:id="piechart" layoutY="64.0" prefHeight="266.0" prefWidth="392.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="72.0" AnchorPane.topAnchor="64.0" />
+                              <Text fx:id="caption" fill="#e8690e" layoutX="348.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="43.00000501424074">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Text>
+                              <DatePicker fx:id="checkDate" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="188.0" promptText="Check Attendance on Date" />
+                              <Button layoutX="222.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleCheck" text="Check" />
+                              <Label fx:id="checkLabel" layoutX="303.0" layoutY="18.0" />
+                              <Label layoutX="28.0" layoutY="47.0" text="Total Lectures" />
+                              <Label fx:id="countTotal" layoutX="137.0" layoutY="47.0">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="271.0" layoutY="47.0" text="Days Missed" />
+                              <Label fx:id="countMissed" layoutX="370.0" layoutY="47.0">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

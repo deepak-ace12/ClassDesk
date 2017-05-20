@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="703.0" prefWidth="1366.0" stylesheets="@../css/Home.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.sty.classdesk.home.HomePageConrtroller">
+   <children>
+      <AnchorPane layoutX="12.0" layoutY="13.0" prefHeight="679.0" prefWidth="1340.0" stylesheets="@../css/Home.css">
+         <children>
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBatches" prefHeight="206.0" prefWidth="423.0" stylesheets="@../css/Home.css" text="Batches">
+               <font>
+                  <Font name="AngsanaUPC Bold" size="74.0" />
+               </font></Button>
+            <Button layoutX="459.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStaff" prefHeight="206.0" prefWidth="423.0" stylesheets="@../css/Home.css" text="Staff">
+               <font>
+                  <Font name="AngsanaUPC Bold" size="74.0" />
+               </font>
+            </Button>
+            <Button layoutX="459.0" layoutY="237.0" mnemonicParsing="false" onAction="#handleFeeDetails" prefHeight="206.0" prefWidth="423.0" stylesheets="@../css/Home.css" text="Fee Details">
+               <font>
+                  <Font name="AngsanaUPC Bold" size="74.0" />
+               </font>
+            </Button>
+            <Button layoutX="459.0" layoutY="459.0" mnemonicParsing="false" prefHeight="206.0" prefWidth="423.0" stylesheets="@../css/Home.css" text="About Us">
+               <font>
+                  <Font name="AngsanaUPC Bold" size="74.0" />
+               </font>
+            </Button>
+            <Button layoutX="899.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleExpenses" prefHeight="206.0" prefWidth="423.0" stylesheets="@../css/Home.css" text="Expenses">
+               <font>
+                  <Font name="AngsanaUPC Bold" size="74.0" />
+               </font>
+            </Button>
+            <Button layoutX="899.0" layoutY="237.0" mnemonicParsing="false" onAction="#handleTestRecords" prefHeight="206.0" prefWidth="423.0" stylesheets="@../css/Home.css" text="Test Records">
+               <font>
+                  <Font name="AngsanaUPC Bold" size="74.0" />
+               </font>
+            </Button>
+            <Button id="lastB" layoutX="899.0" layoutY="459.0" mnemonicParsing="false" prefHeight="206.0" prefWidth="423.0" stylesheets="@../css/Home.css" text="Exit">
+               <font>
+                  <Font name="AngsanaUPC Bold" size="74.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="237.0" mnemonicParsing="false" onAction="#handleEnquiry" prefHeight="206.0" prefWidth="423.0" stylesheets="@../css/Home.css" text="Enquiry">
+               <font>
+                  <Font name="AngsanaUPC Bold" size="74.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleTimeTable" prefHeight="206.0" prefWidth="423.0" stylesheets="@../css/Home.css" text="Time Table">
+               <font>
+                  <Font name="AngsanaUPC Bold" size="74.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
